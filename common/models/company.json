@@ -1,0 +1,94 @@
+{
+  "name": "Company",
+  "plural": "Companies",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "comments": "公司名称"
+    },
+    "website": {
+      "type": "string",
+      "comments": "公司网站"
+    },
+    "logo": {
+      "type": "string",
+      "comments": "公司LOGO"
+    },
+    "address": {
+      "type": "string",
+      "comments": "公司地址"
+    },
+    "postalCode": {
+      "type": "string",
+      "comments": "邮政编码"
+    },
+    "phone": {
+      "type": "string",
+      "comments": "固定电话"
+    },
+    "fax": {
+      "type": "string",
+      "comments": "公司传真"
+    },
+    "email": {
+      "type": "string",
+      "comments": "邮箱地址"
+    },
+    "license": {
+      "type": "string",
+      "comments": "营业执照"
+    },
+    "contact": {
+      "type": "string",
+      "comments": "联系人"
+    },
+    "mobile": {
+      "type": "string",
+      "comments": "联系手机"
+    },
+    "industry": {
+      "type": "string",
+      "comments": "所属行业"
+    },
+    "size": {
+      "type": "string",
+      "comments": "公司规模"
+    },
+    "mainProducts": {
+      "type": "string",
+      "comments": "主营产品"
+    },
+    "salesArea": {
+      "type": "string",
+      "comments": "销售区域"
+    },
+    "profile": {
+      "type": "string",
+      "comments": "公司简介"
+    },
+
+    "created": {
+      "type": "date",
+      "comments": "创建时间"
+    },
+    "modified": {
+      "type": "date",
+      "comments": "更新时间"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "products": {
+      "type": "hasMany",
+      "model": "Product",
+      "foreignKey": "companyId",
+      "comments": "公司产品"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

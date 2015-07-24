@@ -1,0 +1,39 @@
+{
+  "name": "Category",
+  "plural": "Categories",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "comments": "分类名称"
+    },
+    "created": {
+      "type": "date",
+      "comments": "创建时间"
+    },
+    "modified": {
+      "type": "date",
+      "comments": "更新时间"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "parentId": {
+      "type": "belongsTo",
+      "model": "Category",
+      "foreignKey": "categoryId",
+      "comments": "上一级分类"
+    },
+    "products": {
+      "type": "hasMany",
+      "model": "Product",
+      "foreignKey": "categoryId",
+      "comments": "分类产品"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

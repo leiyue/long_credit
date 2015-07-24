@@ -1,0 +1,69 @@
+{
+  "name": "Product",
+  "plural": "Products",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "comments": "产品名称"
+    },
+    "minLoanAmount": {
+      "type": "number",
+      "comments": "贷款最低金额"
+    },
+    "maxLoanAmount": {
+      "type": "number",
+      "comments": "贷款最高金额"
+    },
+    "minLoanTerm": {
+      "type": "number",
+      "comments": "贷款最短期限"
+    },
+    "maxLoanTerm": {
+      "type": "number",
+      "comments": "贷款最长期限"
+    },
+    "minLoanAmount": {
+      "type": "string",
+      "comments": "贷款最低金额"
+    },
+    "maxLoanAmount": {
+      "type": "number",
+      "comments": "贷款最低金额"
+    },
+
+    "created": {
+      "type": "date",
+      "comments": "创建时间"
+    },
+    "modified": {
+      "type": "date",
+      "comments": "更新时间"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "category": {
+      "type": "belongsTo",
+      "model": "Category",
+      "foreignKey": "categoryId",
+      "comments": "所属分类"
+    },
+    "company": {
+      "type": "belongsTo",
+      "model": "Company",
+      "foreignKey": "companyId",
+      "comments": "所属公司"
+    },
+    "orderItems": {
+      "type": "hasMany",
+      "model": "OrderItem",
+      "foreignKey": "productId"
+    }
+  },
+  "acls": [],
+  "methods": []
+}
