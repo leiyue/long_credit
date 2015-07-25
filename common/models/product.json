@@ -26,15 +26,64 @@
       "type": "number",
       "comments": "贷款最长期限"
     },
-    "minLoanAmount": {
+    "guarantee": {
       "type": "string",
-      "comments": "贷款最低金额"
+      "comments": "担保方式"
     },
-    "maxLoanAmount": {
+    "monthlyInterestRate": {
       "type": "number",
-      "comments": "贷款最低金额"
+      "comments": "参考月利率"
+    },
+    "monthlyManagementFee": {
+      "type": "number",
+      "comments": "每月管理费"
+    },
+    "oneTimeFee": {
+      "type": "number",
+      "comments": "一次性收费"
+    },
+    "monthlyInstallment": {
+      "type": "number",
+      "comments": "分期付款"
+    },
+    "oneTimeFee": {
+      "type": "number",
+      "comments": "一次性收费"
+    },
+    "approvalTime": {
+      "type": "number",
+      "comments": "审批时间"
+    },
+    "processingTime": {
+      "type": "number",
+      "comments": "放款时间"
+    },
+    "features": {
+      "type": "string",
+      "comments": "产品特点"
+    },
+    "requirements": {
+      "type": "string",
+      "comments": "申请条件"
+    },
+    "materials": {
+      "type": "string",
+      "comments": "所需材料"
+    },
+    "details": {
+      "type": "string",
+      "comments": "详细说明"
     },
 
+
+    "rating": {
+      "type": "string",
+      "comments": "产品评级"
+    },
+    "status": {
+      "type": "string",
+      "comments": "产品状态"
+    },
     "created": {
       "type": "date",
       "comments": "创建时间"

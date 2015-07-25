@@ -10,6 +10,7 @@
       "required": true,
       "comments": "分类名称"
     },
+
     "created": {
       "type": "date",
       "comments": "创建时间"
