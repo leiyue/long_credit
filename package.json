@@ -8,8 +8,10 @@
     "dev": "nodemon server/server.js --watch server common"
   },
   "dependencies": {
+    "bcryptjs": "^2.2.0",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
+    "debug": "^2.2.0",
     "errorhandler": "^1.1.1",
     "loopback": "^2.14.0",
     "loopback-boot": "^2.6.5",
