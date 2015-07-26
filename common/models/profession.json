@@ -1,0 +1,41 @@
+{
+  "name": "Profession",
+  "plural": "Professions",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "properties": {
+    "isOfficeWorker": {
+      "type": "boolean",
+      "comments": "上班族"
+    },
+    "isBusinessOwner": {
+      "type": "boolean",
+      "comments": "企业主"
+    },
+    "isFreelancer": {
+      "type": "boolean",
+      "comments": "自由职业者"
+    },
+
+    "created": {
+      "type": "date",
+      "comments": "企业主"
+    },
+    "modified": {
+      "type": "date",
+      "comments": "更新时间"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "userId",
+      "comments": "用户信息"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

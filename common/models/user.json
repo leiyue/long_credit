@@ -1,0 +1,147 @@
+{
+  "name": "User",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "properties": {
+    "username": {
+      "type": "string",
+      "required": true,
+      "comments": "用户名"
+    },
+    "password": {
+      "type": "string",
+      "required": true,
+      "comments": "密码"
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "comments": "姓名"
+    },
+    "mobile": {
+      "type": "string",
+      "comments": "手机号"
+    },
+    "email": {
+      "type": "string",
+      "comments": "邮箱"
+    },
+    "mobile": {
+      "type": "string",
+      "comments": "手机号"
+    },
+    "hukouCity": {
+      "type": "string",
+      "comments": "户籍城市"
+    },
+    "workingCity": {
+      "type": "string",
+      "comments": "工作城市"
+    },
+    "identityCard": {
+      "type": "string",
+      "comments": "身份证"
+    },
+    "maritalStatus": {
+      "type": "string",
+      "comments": "婚姻状况"
+    },
+    "education": {
+      "type": "string",
+      "comments": "文化程度"
+    },
+    "validated": {
+      "type": "boolean",
+      "comments": "信息认证"
+    },
+
+
+
+    "created": {
+      "type": "date",
+      "comments": "创建时间"
+    },
+    "modified": {
+      "type": "date",
+      "comments": "更新时间"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "AccessToken",
+      "foreignKey": "userId"
+    },
+    "profession": {
+      "type": "hasOne",
+      "model": "Profession",
+      "foreignKey": "userId",
+      "comments": "职业信息"
+    },
+    "orders": {
+      "type": "hasMany",
+      "model": "Order",
+      "foreignKey": "userId",
+      "comments": "订单信息"
+    }
+  },
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "register"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "login"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "logout"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "findById"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "changePassword"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "updateAttributes"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "confirm"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "resetPassword"
+    }
+  ],
+  "methods": []
+}
