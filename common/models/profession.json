@@ -9,9 +9,45 @@
       "type": "boolean",
       "comments": "上班族"
     },
+    "companyType": {
+      "type": "string",
+      "comments": "公司性质"
+    },
+    "serviceYears": {
+      "type": "string",
+      "comments": "工作年限"
+    },
+    "paymentForm": {
+      "type": "boolean",
+      "comments": "工资发放形式"
+    },
     "isBusinessOwner": {
       "type": "boolean",
       "comments": "企业主"
+    },
+    "businessTerm": {
+      "type": "string",
+      "comments": "公司经营时间"
+    },
+    "registeredLand": {
+      "type": "string",
+      "comments": "经营注册地"
+    },
+    "industry": {
+      "type": "string",
+      "comments": "所属行业"
+    },
+    "size": {
+      "type": "string",
+      "comments": "公司规模"
+    },
+    "privateCashFlow": {
+      "type": "string",
+      "comments": "公司对私流水"
+    },
+    "publicCashFlow": {
+      "type": "string",
+      "comments": "公司对公流水"
     },
     "isFreelancer": {
       "type": "boolean",
@@ -20,7 +56,7 @@
 
     "created": {
       "type": "date",
-      "comments": "企业主"
+      "comments": "创建时间"
     },
     "modified": {
       "type": "date",
