@@ -1,0 +1,102 @@
+{
+  "name": "Asset",
+  "plural": "Assets",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "properties": {
+    "monthlyIncome": {
+      "type": "number",
+      "comments": "月收入"
+    },
+    "noHousing": {
+      "type": "boolean",
+      "comments": "无房产"
+    },
+    "commercialHousing": {
+      "type": "boolean",
+      "comments": "商品房"
+    },
+    "dualPurposeHousing": {
+      "type": "boolean",
+      "comments": "商住两用房"
+    },
+    "affordableHousing": {
+      "type": "boolean",
+      "comments": "经济适用房"
+    },
+    "publicHousing": {
+      "type": "boolean",
+      "comments": "已购公房"
+    },
+    "homesteadHousing": {
+      "type": "boolean",
+      "comments": "宅基地"
+    },
+    "armyHousing": {
+      "type": "boolean",
+      "comments": "军产房"
+    },
+    "shopHousing": {
+      "type": "boolean",
+      "comments": "商铺"
+    },
+    "officeHousing": {
+      "type": "boolean",
+      "comments": "写字楼"
+    },
+    "factoryBuilding": {
+      "type": "boolean",
+      "comments": "厂房"
+    },
+    "farmerHousing": {
+      "type": "boolean",
+      "comments": "小产权房"
+    },
+    "rebuildHousing": {
+      "type": "boolean",
+      "comments": "危改房"
+    },
+
+    "noCar": {
+      "type": "boolean",
+      "comments": "无车产"
+    },
+    "car": {
+      "type": "boolean",
+      "comments": "有车无抵押"
+    },
+    "mortgagedCar": {
+      "type": "boolean",
+      "comments": "有车已抵押"
+    },
+    "accumulationFunds": {
+      "type": "boolean",
+      "comments": "公积金"
+    },
+    "socialSecurity": {
+      "type": "boolean",
+      "comments": "社会保险"
+    },
+
+    "created": {
+      "type": "date",
+      "comments": "创建时间"
+    },
+    "modified": {
+      "type": "date",
+      "comments": "更新时间"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "userId",
+      "comments": "用户信息"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

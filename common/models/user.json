@@ -19,6 +19,10 @@
       "required": true,
       "comments": "姓名"
     },
+    "gender": {
+      "type": "string",
+      "comments": "性别"
+    },
     "mobile": {
       "type": "string",
       "comments": "手机号"
@@ -79,6 +83,12 @@
       "model": "Profession",
       "foreignKey": "userId",
       "comments": "职业信息"
+    },
+    "profession": {
+      "type": "hasOne",
+      "model": "Asset",
+      "foreignKey": "userId",
+      "comments": "资产信息"
     },
     "orders": {
       "type": "hasMany",
