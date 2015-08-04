@@ -1,63 +1,63 @@
-module.exports = function(Asset) {
+module.exports = function(Credit) {
 
-    Asset.setup = function () {
+    Credit.setup = function () {
         // We need to call the base class's setup method
-        Asset.base.setup.call(this);
+        Credit.base.setup.call(this);
         var UserModel = this;
 
         //UserModel.afterInitialize = function (next, modelInstance) {
-        //  console.log("Asset after Initialize");
+        //  console.log("Credit after Initialize");
         //  next();
         //};
 
         UserModel.beforeValidate = function (next, modelInstance) {
-            console.log("Asset before Validate");
+            console.log("Credit before Validate");
             next();
         };
 
         UserModel.afterValidate = function (next, modelInstance) {
-            console.log("Asset after Validate");
+            console.log("Credit after Validate");
             next();
         };
 
         UserModel.beforeSave = function (next, modelInstance) {
-            console.log("Asset before Save");
+            console.log("Credit before Save");
             next();
         };
 
         UserModel.afterSave = function (next, modelInstance) {
-            console.log("Asset after Save");
+            console.log("Credit after Save");
             next();
         };
 
         UserModel.beforeCreate = function (next, modelInstance) {
-            console.log("Asset before Create");
+            console.log("Credit before Create");
             next();
         };
 
         UserModel.beforeCreate = function (next, modelInstance) {
-            console.log("Asset after Create");
+            console.log("Credit after Create");
             next();
         };
 
         UserModel.beforeUpdate = function (next, modelInstance) {
             modelInstance.modified = new Date();
-            console.log("Asset before Update");
+            console.log("Credit before Update");
             next();
         };
 
         UserModel.beforeCreate = function (next, modelInstance) {
-            console.log("Asset after Update");
+            console.log("Credit after Update");
             next();
         };
 
         UserModel.beforeDestroy = function (next, modelInstance) {
-            console.log("Asset before Destroy");
+            console.log("Credit before Destroy");
             next();
         };
 
         UserModel.afterDestroy = function (next, modelInstance) {
-            console.log("Asset after Destroy");
+            console.log("Credit after Destroy");
             next();
         };
 
@@ -77,6 +77,6 @@ module.exports = function(Asset) {
         return UserModel;
     };
 
-    Asset.setup();
+    Credit.setup();
 
 };
